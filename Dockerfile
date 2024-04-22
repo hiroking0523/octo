@@ -21,3 +21,10 @@ RUN git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT && \
     pyenv install $PYTHON_VERSION && \
     pyenv global $PYTHON_VERSION
 
+# pipでインストール
+COPY requirements.txt /workdir/
+RUN pip install -U pip &&\
+    pip install --no-cache-dir -r /workdir/requirements.txt && \
+    pip install --upgrade jax jaxlib && \
+    pip install --upgrade flax && \
+    rm /workdir/requirements.txt
