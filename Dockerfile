@@ -25,6 +25,6 @@ RUN git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT && \
 COPY requirements.txt /workdir/
 RUN pip install -U pip &&\
     pip install --no-cache-dir -r /workdir/requirements.txt && \
-    pip install --upgrade jax jaxlib && \
     pip install --upgrade flax && \
+    pip install --upgrade "jax[cuda12_pip]==0.4.20" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
     rm /workdir/requirements.txt

@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/workdir')
 import datetime
 from functools import partial
 import imp
@@ -97,7 +99,7 @@ def main(_):
     replicated_sharding = NamedSharding(mesh, PartitionSpec())
 
     # prevent tensorflow from using GPU memory since it's only used for data loading
-    tf.config.set_visible_devices([], "GPU")
+    # tf.config.set_visible_devices([], "GPU")
 
     #########
     #
