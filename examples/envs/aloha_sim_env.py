@@ -6,6 +6,9 @@ import gym
 import jax.numpy as jnp
 import numpy as np
 
+import sys
+# sys.path.append("/home/hiroki_nishihara/workspase/octo/act")
+sys.path.append("/workdir/act")
 # need to put https://github.com/tonyzhaozh/act in your PATH for this import to work
 from sim_env import BOX_POSE, make_sim_env
 

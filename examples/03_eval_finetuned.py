@@ -23,12 +23,13 @@ import jax
 import numpy as np
 import wandb
 
-sys.path.append("path/to/your/act")
-
-from envs.aloha_sim_env import AlohaGymEnv  # keep this to register ALOHA sim env
-
+# sys.path.append("/home/hiroki_nishihara/workspase/octo")
+sys.path.append("/workdir")
 from octo.model.octo_model import OctoModel
 from octo.utils.gym_wrappers import HistoryWrapper, RHCWrapper, UnnormalizeActionProprio
+from envs.aloha_sim_env import AlohaGymEnv  # keep this to register ALOHA sim env
+# sys.path.append("/home/hiroki_nishihara/workspase/octo/act")
+sys.path.append("/workdir/act")
 
 FLAGS = flags.FLAGS
 

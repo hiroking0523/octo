@@ -6,6 +6,9 @@ To run this example, first download and extract the dataset from here: https://r
 
 python examples/02_finetune_new_observation_action.py --pretrained_path=hf://rail-berkeley/octo-small --data_dir=...
 """
+import sys
+sys.path.append('/workdir')
+# sys.path.append("/home/hiroki_nishihara/workspase/octo")
 from absl import app, flags, logging
 import flax
 import jax
@@ -51,7 +54,7 @@ def main(_):
 
     initialize_compilation_cache()
     # prevent tensorflow from using GPU memory since it's only used for data loading
-    tf.config.set_visible_devices([], "GPU")
+    # tf.config.set_visible_devices([], "GPU")
 
     # setup wandb for logging
     wandb.init(name="finetune_aloha", project="octo")

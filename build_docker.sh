@@ -1,1 +1,1 @@
-sudo docker build -f Dockerfile -t octo:v3 .
+sudo docker build -f Dockerfile -t octo:latest .
