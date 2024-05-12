@@ -1,7 +1,7 @@
 #NishiPC
-#FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu20.04 
+FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu20.04 
 #NishiPC2
-FROM nvidia/cuda:12.3.2-cudnn9-devel-ubuntu22.04 
+# FROM nvidia/cuda:12.3.2-cudnn9-devel-ubuntu22.04 
 SHELL ["bash", "-c"]
 
 # 時間帯の設定
